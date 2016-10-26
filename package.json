@@ -1,8 +1,8 @@
 {
-  "name": "cs147-lab-1",
-  "description": "Serving static content via html files",
+  "name": "Vouch",
+  "description": "diks out 4 harambe",
   "version": "0.0.1",
-  "author": "CS147 Staff <cs147@cs.stanford.edu>",
+  "author": "Chris Kim",
 
   "repository": {
   	"type": "git",
