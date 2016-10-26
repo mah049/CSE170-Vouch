@@ -1,10 +1,3 @@
-/**
- * Introduction to Human-Computer Interaction
- * Lab 2
- * --------------
- * Created by: Michael Bernstein
- * Last updated: December 2013
- */
 var PORT = 80;
 
 // Express is a web framework for node.js
