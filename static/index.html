@@ -1,66 +1,97 @@
 <html>
   <head>
+  	<script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row"> 
-      	<div class="col-sm-4" id="top"> 
-      		<a href="addNew.html">
-      			<button type="button" class="btn btn-default">Add New</button>
-      		</a>
-      	</div>
-      	<div class="col-sm-4"> </div>
-      	<div class="col-sm-4" id="top">  
-      		<div class="pull-right"> <form> <input type="text" placeholder="Search" align="right"> </input> </form> </div>
-      	</div>
-      </div>
-      <div class="row">
-      	<div class="col-sm-4"> 
-      	<p>Filter</p>
-			<form>
-				<div class="radio">
-			      <label><input type="radio" name="optradio">Most Popular</label>
-			    </div>
-			    <div class="radio">
-			      <label><input type="radio" name="optradio">Most Recent</label>
-			    </div>
-			    <div class="radio">
-			      <label><input type="radio" name="optradio">Least Distance</label>
-			    </div>
-			</form>
-      	</div>
-      	<div class="col-sm-4"> 
-	      	<a href="dealView.html">
-	      		<img src="../images/exampleDeal.png" alt="HTML5 icon">
-	      	</a>
-	    </div>
-	    <div class="col-sm-4"> </div>
-	    <div class="col-sm-4"> </div>
-      </div>
-      <div class="row">
-      	<div class="col-sm-4">
-      		<a href="support.html">
-      			<button type="button" class="btn btn-default">Support</button>
-      		</a>
-      	</div>
-      </div>
-      <div class="row">
-      	<div class="col-sm-4">
-      		<a href="faq.html">
-      			<button type="button" class="btn btn-default">FAQ</button>
-      		</a>
-      	</div>
-      </div>
-      <div class="row">
-      	<div class="col-sm-4">
-      		<a href="contact.html">
-      			<button type="button" class="btn btn-default">Contact</button>
-      		</a>
-      	</div>
-      </div>
+    	<div class="row">
+    		<div class="col-sm-4"> </div>
+    		<div class="col-sm-4" align="middle">
+    			<h2>VOUCH</h2>
+    		</div>
+    		<div class="col-sm-4"> </div>
+    	</div>
+		<div class="row"> 
+		  	<div class="col-sm-4" id="top"> 
+		  		<a href="addNew.html">
+		  			<button type="button" class="btn btn-default">Add New</button>
+		  		</a>
+		  	</div>
+		  	<div class="col-sm-4" id="top"> 
+		  		<p>You are in San Diego</p>
+		  	</div>
+		  	<div class="col-sm-4" id="top">  
+		  		<div class="pull-right"> <form> <input type="text" placeholder="Search" align="right"> </input> </form> </div>
+		  	</div>
+	  	</div>
+	  	<div class="row">
+		  	<div class="col-sm-4"> 
+		  		<p>Filter</p>
+				<form>
+					<div class="radio">
+				      <label><input type="radio" name="optradio">Most Popular</label>
+				    </div>
+				    <div class="radio">
+				      <label><input type="radio" name="optradio">Most Recent</label>
+				    </div>
+				    <div class="radio">
+				      <label><input type="radio" name="optradio">Least Distance</label>
+				    </div>
+				</form>
+	  		</div>
+		  	<div class="col-sm-4" id="top"> 
+		      	<a href="dealView.html">
+		      		<img src="../images/exampleDeal.png" alt="HTML5 icon">
+		      	</a>
+		    </div>
+		    <div class="col-sm-4" align="right"> 
+		    	<p>720 vouches</p>
+		    </div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col-sm-4"> 
+	  			<div class="checkbox">
+  					<label><input type="checkbox" class="check" id="checkAll">All</label>
+				</div>
+				<div class="checkbox">
+  					<label><input type="checkbox" class="check">Restaurants</label>
+				</div>
+				<div class="checkbox">
+  					<label><input type="checkbox" class="check">Events</label>
+				</div>
+				<div class="checkbox">
+  					<label><input type="checkbox" class="check">Groceries</label>
+				</div>
+	  		</div>
+      		<div class="col-sm-4"> </div>
+      		<div class="col-sm-4"> </div>
+	  	</div>
+	 	<div class="row">
+		  	<div class="col-sm-4" id="top">
+		  		<a href="support.html">
+		  			<button type="button" class="btn btn-default">Support</button>
+		  		</a>
+		  	</div>
+	  	</div>
+	  	<div class="row">
+		  	<div class="col-sm-4">
+		  		<a href="faq.html">
+		  			<button type="button" class="btn btn-default">FAQ</button>
+		  		</a>
+		  	</div>
+	  	</div>
+	  	<div class="row">
+		  	<div class="col-sm-4">
+		  		<a href="contact.html">
+		  			<button type="button" class="btn btn-default">Contact</button>
+		  		</a>
+		  	</div>
+	  	</div>
     </div>
+
+    <script src="../vouch.js"></script>
   </body>
 </html>
