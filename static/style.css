@@ -12,6 +12,15 @@
 	padding-right:10%;
 }
 
+#margin-left-right-align{
+	padding-left:10%;
+	padding-right:10%;
+}
+#orange-border{
+	
+	outline: 1px solid orange;
+}
+
 #buffer{
 	padding:2%;
 }
