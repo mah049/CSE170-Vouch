@@ -18,11 +18,19 @@
 }
 #orange-border{
 	
-	outline: 1px solid orange;
+	outline: 3px	solid black;
 }
 
 #buffer{
 	padding:2%;
+}
+
+#small-buffer{
+	padding:1%;
+}
+
+#search-bar-padding{
+	padding-right:10%;
 }
 
 .thin-address-border{
