@@ -1,3 +1,23 @@
 #top {
-	padding-top: 10px;
+	padding-left:3%;
+	padding-top:3%
+	padding-right:3%;
+}
+
+#margin-left-align{
+	padding-left:10%;
+}
+
+#margin-right-align{
+	padding-right:10%;
+}
+
+#buffer{
+	padding:2%;
+}
+
+.thin-address-border{
+	display: inline;
+	border-style:solid;
+	border-width:thin;
 }
