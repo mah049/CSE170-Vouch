@@ -21,6 +21,10 @@
 	outline: 3px	solid black;
 }
 
+#buttonwidth{
+	width: 30%;
+	height: 50%;
+}
 #buffer{
 	padding:2%;
 }
@@ -31,6 +35,11 @@
 
 #search-bar-padding{
 	padding-right:10%;
+}
+
+#hand-img-size{
+	width:10%;
+	height:10%;
 }
 
 .thin-address-border{
