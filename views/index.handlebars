@@ -88,15 +88,6 @@
 				<div class="checkbox">
   					<label><input type="checkbox" class="check">Groceries</label>
 				</div>
-				<a href="support.html">
-		  			<button type="button" class="btn btn-default btn-success inline">Support</button>
-		  		</a>
-		  		<a href="faq.html">
-		  			<button type="button" class="btn btn-default btn-success">FAQ</button>
-		  		</a>
-		  		<a href="contact.html">
-		  			<button type="button" class="btn btn-default btn-success">Contact</button>
-		  		</a>
 	  		</div>
 		  	<div class="col-sm-4"> 
 		      	<!-- This is where the image used to be  
@@ -109,9 +100,24 @@
 		    <div class="col-sm-4" align="right" id="margin-right-align"> 
 		    	<p>720 vouches</p>
 		    </div>
+		    <div class="row" id="bottom">
+		    	<a href="support.html">
+		  			<button type="button" class="btn btn-default btn-success inline">Support</button>
+		  		</a>
+		  		<a href="faq.html">
+		  			<button type="button" class="btn btn-default btn-success">FAQ</button>
+		  		</a>
+		  		<a href="contact.html">
+		  			<button type="button" class="btn btn-default btn-success">Contact</button>
+		  		</a>
+		    </div>
 	  	</div>
     </div>
-
+    <script>
+      window.onload=function() { 
+        view();
+      };
+    </script>
     <script src="js/vouch.js"></script>
   </body>
 </html>
