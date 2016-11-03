@@ -95,7 +95,9 @@
 		      		<img src="images/exampleDeal.png" alt="HTML5 icon" class="img-responsive">
 		      	</a>
 				-->
-				<p id="newDeals">{{name}}</p>
+	  		{{#each deal}}
+				<p id="newDeals">{{name}} is the place <br> {{deal}} is the deal </p>
+		    {{/each}}
 		    </div>
 		    <div class="col-sm-4" align="right" id="margin-right-align"> 
 		    	<p>720 vouches</p>
@@ -113,11 +115,6 @@
 		    </div>
 	  	</div>
     </div>
-    <script>
-      window.onload=function() { 
-        view();
-      };
-    </script>
     <script src="js/vouch.js"></script>
   </body>
 </html>
