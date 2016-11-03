@@ -11,7 +11,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/static/addNew.html'));
+    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html'));
 });
 
 // Print logs to the console and compress pages we send
