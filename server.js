@@ -1,7 +1,7 @@
 
 var PORT = 80;
-var app = express ();
-//var	routes = require('./static/routes/routes.js');
+
+var	routes = require('./static/routes/routes.js');
 
 // Express is a web framework for node.js
 // that makes nontrivial applications easier to build
