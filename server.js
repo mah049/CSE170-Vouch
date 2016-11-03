@@ -8,7 +8,6 @@ var	routes = require('./static/routes/routes.js');
 var express = require('express');
 var handlebars = require('express3-handlebars')
 var path = require('path');
-//static webpages
 
 // Create the server instance
 var app = express();
@@ -22,8 +21,6 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.cookieParser('Intro HCI secret key'));
-app.use(express.session());
 app.use(app.router);
 
 //Serves static files
@@ -35,7 +32,7 @@ app.use(express.static(__dirname + '/static'));
 
 
  app.get('/', function(req, res) {
-     res.sendfile(__dirname+'/static/index.handlebars');
+     res.render(__dirname+'/static/index.handlebars');
  });
 
 //app.get('/', function(req, res) {
