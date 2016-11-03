@@ -1,20 +1,25 @@
 {
-  "name": "Vouch",
+  "name": "vouch",
   "description": "diks out 4 harambe",
   "version": "0.0.2",
   "author": "Chris Kim",
-
   "repository": {
-  	"type": "git",
-  	"url": "https://github.com/mah049/CSE170-Vouch"
+    "type": "git",
+    "url": "git+https://github.com/mah049/CSE170-Vouch.git"
   },
   "license": "MIT",
-
   "main": "server.js",
   "dependencies": {
-    "express": "3.x"
+    "express": "^3.21.2"
   },
   "engines": {
-  	"node": "0.10.x"
-  }
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "bugs": {
+    "url": "https://github.com/mah049/CSE170-Vouch/issues"
+  },
+  "homepage": "https://github.com/mah049/CSE170-Vouch#readme"
 }

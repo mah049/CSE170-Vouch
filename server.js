@@ -1,5 +1,5 @@
 
-var PORT = 80;
+var PORT = 3000;
 
 var	routes = require('./static/routes/routes.js');
 
@@ -20,9 +20,9 @@ app.use(express.compress());
 // maps to /static/index.html on this machine
 app.use(express.static(__dirname + '/static'));
 
-app.get('/', function(req, res) {
-    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));
-});
+//app.get('/', function(req, res) {
+//    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));
+//});
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 3000 for development
 app.listen(port, function() {
