@@ -6,7 +6,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
   </head>
   <body>
-
+    <div class="navbar transparent navbar-inverse navbar-fixed-top">
+      <nav class="navbar-inner">
+        ...
+      </div>
+    </div>
     <div class="container-fluid">
       <div class="row" id="buffer"></div>
     	<div class="row">
@@ -53,7 +57,7 @@
 		      		<img src="images/exampleDeal.png" alt="HTML5 icon" class="img-responsive">
 		      	</a>
 				-->
-				<p id="newDeals">A solid border.</p>
+				<p id="newDeals">{{name}}</p>
 		    </div>
 		    <div class="col-sm-4" align="right" id="margin-right-align"> 
 		    	<p>720 vouches</p>
