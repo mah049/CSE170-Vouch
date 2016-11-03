@@ -1,4 +1,4 @@
-#newDeals{
+#newDeals {
 	border-style: solid;
 }
 
@@ -8,49 +8,55 @@
 	padding-right:3%;
 }
 
-#margin-left-align{
+#margin-left-align {
 	padding-left:10%;
 }
 
-#margin-right-align{
+#margin-right-align {
 	padding-right:10%;
 }
 
-#margin-left-right-align{
+#margin-left-right-align {
 	padding-left:10%;
 	padding-right:10%;
 }
 
-#orange-border{
+#orange-border {
 	outline: 3px	solid black;
 }
 
-#buttonwidth{
+#buttonwidth {
 	width: 30%;
 	height: 50%;
 }
 
-#buffer{
+#buffer {
 	padding:2%;
 }
 
-#small-buffer{
+#small-buffer {
 	padding:1%;
 }
 
-#search-bar-padding{
+#search-bar-padding {
 	padding-right:10%;
 }
 
-#hand-img-size{
+#hand-img-size {
 	width:10%;
 	height:10%;
 }
 
-.thin-address-border{
+.thin-address-border {
 	display: inline;
 	border-style:solid;
 	border-width:thin;
+}
+
+#bottom {
+	position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
 
 .navbar.transparent.navbar-inverse .navbar-inner {
