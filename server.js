@@ -21,7 +21,7 @@ app.use(express.compress());
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res) {
-    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html'));
+    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));
 });
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 3000 for development
