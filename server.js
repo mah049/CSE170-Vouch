@@ -2,6 +2,7 @@
 var PORT = 3000;
 
 var	routes = require('./static/routes/routes.js');
+var add = require('./static/routes/add.js');
 
 // Express is a web framework for node.js
 // that makes nontrivial applications easier to build
@@ -32,6 +33,7 @@ app.use(express.static(__dirname + '/static'));
 
 app.get('/test',routes.getDeals)
 app.get('/', routes.view);
+app.get('/add', add.addNew);
 
 //app.get('/', function(req, res) {
 //    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));

@@ -1,19 +1,59 @@
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row"> 
-      	<div class="col-sm-4" id="top">
-          <p>View Specific Deal Page</p>
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" align="left" href="addNew.html"><button type="button" class="btn btn-default btn-primary"><span class="glyphicon glyphicon-plus"></span></button></a>
+                <a class="navbar-brand topnav" id="center-nav"><img id="logo" src="images/vouchlogo.png" class="img-responsive"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Log In</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      	<div class="col-sm-4"> </div>
-      	<div class="col-sm-4" id="top">  
-      		<div class="pull-right"> <form> <input type="text" placeholder="search" align="right"> </input> </form> </div>
-      	</div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row" id="buffer"></div>
+      <div class="row"> 
+        <div class="col-md-4"> 
+          <p>You are in San Diego</p>
+        </div>
+        <div class="col-md-4" align="middle">
+          <h1>Add New Deal</h1>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <div class="row" id="small-buffer"></div>
+      <div class="row"> 
+        <div class="col-md-4"></div>
+        <div class="col-md-4" align="middle">
+          <form method="get" action="/add" id="newDeal"> 
+            <div class="row" id="small-buffer"><input type="text" name="venue" placeholder="Venue" align="right" required></div>
+            <div class="row" id="small-buffer"><input type="text" name="deal" placeholder="Deal" align="right" required></div>
+            <div class="row" id="small-buffer"><input type="text" name="date" placeholder="Valid Until" align="right" id="date" required></div>
+            <input type="submit"> 
+          </form>
+        </div>
+        <div class="col-md-4"></div>
       </div>
     </div>
   </body>
