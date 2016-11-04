@@ -32,6 +32,7 @@ app.use(express.static(__dirname + '/static'));
 
 app.get('/test',routes.getDeals)
 app.get('/', routes.view);
+app.get('/mostPopular',routes.mostPopular);
 
 //app.get('/', function(req, res) {
 //    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));

@@ -48,13 +48,13 @@
 		  		<p>Filter</p>
 				<form>
 					<div class="radio">
-				      <label><input type="radio" name="optradio">Most Popular</label>
+				      <label><input type="radio" name="optradio" id="mostPopular">Most Popular</label>
 				    </div>
 				    <div class="radio">
-				      <label><input type="radio" name="optradio">Most Recent</label>
+				      <label><input type="radio" name="optradio" id="mostRecent">Most Recent</label>
 				    </div>
 				    <div class="radio">
-				      <label><input type="radio" name="optradio">Least Distance</label>
+				      <label><input type="radio" name="optradio" id="leastDistance">Least Distance</label>
 				    </div>
 				</form>
 				<p>Categories</p>
@@ -87,7 +87,7 @@
 		      	</a>
 				-->
 	  		{{#each deal}}
-				<p id="newDeals">{{Place}} is the place <br> {{Deal}} is the deal </p>
+				<p id="newDeals">{{Place}} is the place <br> {{Deal}} is the deal <br> {{Upvote}} is the upvote </p>
 		    {{/each}}
 		    </div>
 		    <div class="col-sm-4" align="right" id="margin-right-align"> 
