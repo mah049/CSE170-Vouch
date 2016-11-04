@@ -30,10 +30,8 @@ app.use(app.router);
 // maps to /static/index.html on this machine
 app.use(express.static(__dirname + '/static'));
 
-app.get('/test',routes.view)
-app.get('/', function(req, res) {
-    res.render('index.handlebars',routes.getDeals);
-});
+app.get('/test',routes.getDeals)
+app.get('/', routes.view);
 
 //app.get('/', function(req, res) {
 //    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));
