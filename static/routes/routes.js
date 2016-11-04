@@ -34,7 +34,7 @@ exports.mostPopular = function(req,res){
   console.log(yes);
   var ret = JSON.parse(please);
   console.log(typeof ret);
-  res.render('index.handlebars', ret);
+  res.render('project.handlebars', ret);
 
 
 /*  var newJSON;
