@@ -13,7 +13,6 @@ exports.view = function(req, res){
 exports.mostPopular = function(req,res){
   var manipulate = data;
   
-  
   //console.log(manipulate);
   //console.log(manipulate.deal);
   //console.log(manipulate.deal[0]);
@@ -36,6 +35,8 @@ exports.mostPopular = function(req,res){
   var ret = JSON.parse(please);
   console.log(typeof ret);
   res.render('index.handlebars', ret);
+
+
 /*  var newJSON;
   var retList=[];
   console.log(newList);

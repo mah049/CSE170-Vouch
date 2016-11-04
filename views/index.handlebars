@@ -52,7 +52,7 @@
 	  	</div>
 	  	<div class="row" id="small-buffer"></div>
 	  	<div class="row">
-		  	<div class="col-md-4"> 
+		  	<div class="col-md-2"> 
 		  		<p>Filter</p>
 				<form>
 					<div class="radio">
@@ -89,17 +89,19 @@
 		  			<a href="contact.html"><button type="button" class="btn btn-default btn-success">Contact Us</button></a>
 		  		</div>
 	  		</div>
-		  	<div class="col-sm-4" align = "middle"> 
+		  	<div class="col-sm-8" align = "middle"> 
 		      	<!-- This is where the image used to be  
 				<a href="dealView.html">
 		      		<img src="images/exampleDeal.png" alt="HTML5 icon" class="img-responsive">
 		      	</a>
 				-->
 	  		{{#each deal}}
+				<a href = "dealView.html" >
 				<p id="newDeals">{{Place}} is the place <br> {{Deal}} is the deal <br> {{Upvote}} is the upvote </p>
+				</a>
 		    {{/each}}
 		    </div>
-		    <div class="col-sm-4" align="right" id="margin-right-align"> 
+		    <div class="col-sm-2" align="right" id="margin-right-align"> 
 		    	<p>720 vouches {{test}} </p>
 		    </div>
 	  	</div>
