@@ -2,6 +2,11 @@
 	border-style: solid;
 }
 
+#help-buttons {
+	padding-left:2%;
+	padding-top:1%;
+}
+
 #top {
 	padding-left:3%;
 	padding-top:3%
@@ -19,6 +24,14 @@
 #margin-left-right-align {
 	padding-left:10%;
 	padding-right:10%;
+}
+
+#margin-top {
+	min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  	min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  	display: flex;
+  	align-items: center;
 }
 
 #orange-border {
@@ -62,4 +75,17 @@
     left: 50%;
     margin-left: -60px;
     display: block;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
 }
