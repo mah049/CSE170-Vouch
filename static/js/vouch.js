@@ -4,8 +4,9 @@ $("#checkAll").click(function () {
 
 $('#mostPopular').click(function() {
    if($('#mostPopular').is(':checked')) {    
-     $.get("/mostPopular",mostPopular) 
-     console.log("Most Popular selected");
+     //$.get("/mostPopular",mostPopular) 
+     //console.log("Most Popular selected");
+     window.location.href = "https://cse170vouch-prod.herokuapp.com/mostPopular";
    }
 });
 
