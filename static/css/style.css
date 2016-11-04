@@ -89,3 +89,7 @@
     border:0;
     background:transparent;
 }
+
+.top-buffer{
+	padding-top: 2%;
+}
