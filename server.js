@@ -32,7 +32,7 @@ app.use(express.static(__dirname + '/static'));
 
 app.get('/test',routes.view)
 app.get('/', function(req, res) {
-    res.render('index.handlebars',{'name': 'asdf'});
+    res.render('index.handlebars',routes.getDeals);
 });
 
 //app.get('/', function(req, res) {

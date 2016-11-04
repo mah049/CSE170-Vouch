@@ -1,3 +1,22 @@
 { 
-	"name": "Mark Huang"
+	"deals" : [{
+	 "Place": "Pizzaport",
+	 "Deal" : "20% Off"
+	},
+	{
+	 "Place": "McDonalds",
+	 "Deal" : "20% Off"
+	},
+	{
+	 "Place": "BurgerKing",
+	 "Deal" : "10% Off"
+	},
+	{
+	 "Place": "Wendy's",
+	 "Deal" : "20% Off"
+	},
+	{
+	 "Place": "Carl's Jr.",
+	 "Deal" : "20% Off"
+	}]
 }
