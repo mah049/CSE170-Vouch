@@ -15,18 +15,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="http://youngmpark.github.io/" class="navbar-left"><img id="logo" src="images/vouchlogo.png" class="img-responsive"></a>
+                <a class="navbar-brand topnav" align="left" href="addNew.html"><button type="button" class="btn btn-default btn-primary"><span class="glyphicon glyphicon-plus"></span></button></a>
+                <a class="navbar-brand topnav" id="center-nav"><img id="logo" src="images/vouchlogo.png" class="img-responsive"></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.handlebars">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Add</a>
-                    </li>
-                    <li>
-                        <a href="">Contact</a>
+                        <a href="">Home</a>
                     </li>
                     <li>
                         <a href="">Log In</a>
@@ -37,31 +32,18 @@
     </nav>
 
     <div class="container-fluid">
-      <div class="row" id="buffer"></div>
-    	<div class="row">
-		    <div class="col-md-4"></div>
-    		<div class="col-md-4" align="middle">
- 		      	<a href="index.html">
-		      		<img src="images/Homepage.JPG" alt="HTML5 icon" class="img-responsive">
-		      	</a>
-    		</div>
-			<div class="col-md-4"></div>
-    	</div>
+    	<div class="row" id="buffer"></div>
 		<div class="row"> 
 		  	<div class="col-md-4"> 
-		  		<a href="addNew.html">
-		  			<button type="button" class="btn btn-default btn-primary"><span class="glyphicon glyphicon-plus"></span> Add New</button>
-		  		</a>
+		  		<p>You are in Julian's House</p>
 		  	</div>
-		  	<div class="col-md-4" align="middle"> 
-		  		<p>You are in Julian House</p>
-		  	</div>
-		  	<div class="col-md-4" align="right" id="search-bar-padding">  
+		  	<div class="col-md-4" align="middle">
 		  		<div> <form> <input type="text" placeholder="Search" align="right"> </input> </form> </div>
 		  	</div>
+		  	<div class="col-md-4"></div>
 	  	</div>
-		<div class="row" id="buffer"></div>
-	  	<div class="row" >
+	  	<div class="row" id="small-buffer"></div>
+	  	<div class="row">
 		  	<div class="col-md-4"> 
 		  		<p>Filter</p>
 				<form>
@@ -88,6 +70,15 @@
 				<div class="checkbox">
   					<label><input type="checkbox" class="check">Groceries</label>
 				</div>
+				<div class="row">
+					<a href="support.html"><button type="button" class="btn btn-default btn-success inline">Support</button></a>
+		  		</div>
+		  		<div class="row">
+		  			<a href="faq.html"><button type="button" class="btn btn-default btn-success">FAQ</button></a>
+		  		</div>
+		  		<div class="row">
+		  			<a href="contact.html"><button type="button" class="btn btn-default btn-success">Contact Us</button></a>
+		  		</div>
 	  		</div>
 		  	<div class="col-sm-4" align = "middle"> 
 		      	<!-- This is where the image used to be  
@@ -101,17 +92,6 @@
 		    </div>
 		    <div class="col-sm-4" align="right" id="margin-right-align"> 
 		    	<p>720 vouches {{test}} </p>
-		    </div>
-		    <div class="row" id="bottom">
-		    	<a href="support.html">
-		  			<button type="button" class="btn btn-default btn-success inline">Support</button>
-		  		</a>
-		  		<a href="faq.html">
-		  			<button type="button" class="btn btn-default btn-success">FAQ</button>
-		  		</a>
-		  		<a href="contact.html">
-		  			<button type="button" class="btn btn-default btn-success">Contact</button>
-		  		</a>
 		    </div>
 	  	</div>
     </div>
