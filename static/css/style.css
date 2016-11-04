@@ -31,7 +31,7 @@
 }
 
 #buffer {
-	padding:2%;
+	padding:3.2%;
 }
 
 #small-buffer {
@@ -55,4 +55,11 @@
 
 .navbar.transparent.navbar-inverse .navbar-inner {
    background: rgba(0,0,0,0.4);
+}
+
+#center-nav {
+	position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    display: block;
 }
