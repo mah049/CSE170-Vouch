@@ -7,7 +7,7 @@ exports.getDeals = function(req,res){
 }
 
 exports.view = function(req, res){
-  res.render('index.handlebars', {'deal' : {'place' :'hi'}});
+  res.render('index.handlebars', data );
   //res.render('index.handlebars', data );
 }
 
