@@ -33,11 +33,8 @@ app.use(express.static(__dirname + '/static'));
 
 app.get('/test',routes.getDeals)
 app.get('/', routes.view);
-<<<<<<< HEAD
 app.get('/mostPopular',routes.mostPopular);
-=======
 app.get('/add', add.addNew);
->>>>>>> ae105690df32687fa9719d3931cfb39f4d4ed021
 
 //app.get('/', function(req, res) {
 //    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));
