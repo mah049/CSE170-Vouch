@@ -22,5 +22,4 @@ function mostPopular(result){
     $("#deal-container").append(
   	"<a href = \"dealView.html\" > <p id=\"newDeals\">"+ location + " is the place <br>"+ deal+ " is the deal <br>"+upvote+" is the upvote </p> </a>"); 
   }
-
 }
