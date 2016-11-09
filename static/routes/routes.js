@@ -10,9 +10,8 @@ exports.view = function(req, res){
   res.render('index.handlebars', data );
 }
 
-exports.mostPopular = function(req,res){
+exports.mostPopular = function(req,res){  
   var manipulate = data;
-  
   //console.log(manipulate);
   //console.log(manipulate.deal);
   //console.log(manipulate.deal[0]);
@@ -24,18 +23,18 @@ exports.mostPopular = function(req,res){
   //}
   //newList.sort();
 
-  var asdfjkl = manipulate.deal.sort(function(a, b) {
+  var sortByUpvote = manipulate.deal.sort(function(a, b) {
     return parseFloat(b.Upvote) - parseFloat(a.Upvote);
   });
-  var hi = JSON.stringify(asdfjkl);
-  console.log(hi);
-  var please = "{ \"deal\":"+hi+"}";
-  var yes = JSON.stringify(please);
+  var convertToString = JSON.stringify(sortByUpvote);
+  console.log(convertToString);
+  var convertToJSON = "{ \"deal\":"+convertToString+"}";
+  var yes = JSON.stringify(convertToJSON);
   console.log(yes);
-  var ret = JSON.parse(please);
+  var ret = JSON.parse(convertToJSON);
   console.log(typeof ret);
-  res.render('project.handlebars', ret);
-
+  //res.render('index.handlebars', ret);
+  res.json(ret);
 
 /*  var newJSON;
   var retList=[];
