@@ -36,6 +36,7 @@ app.get('/test',routes.getDeals)
 app.get('/', routes.view);
 app.get('/mostPopular',routes.mostPopular);
 app.get('/add', add.addNew);
+app.get('/:places',routes.dealView)
 app.get('/dealView',routes.dealView)
 
 //app.get('/', function(req, res) {

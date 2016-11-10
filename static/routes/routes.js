@@ -25,9 +25,12 @@ exports.mostPopular = function(req,res){
   res.json(ret);
 }
 
-exports.dealView = function(req,res){
-  //if(data.deal.Place==""){
-  //  var retData = 
-  //}
-  res.render('dealViews.handlebars',data.deal[1]);
+exports.dealView = function(req,res){  
+  
+  var place = req.params.places;
+  for(var i = 0; i<data.deal.length;i++){
+    if(data.deal[i].Place==place){
+        res.render('dealViews.handlebars',data.deal[i]);
+    }
+  }
 }

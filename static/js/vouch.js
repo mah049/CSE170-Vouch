@@ -10,6 +10,7 @@ $('#mostPopular').click(function() {
    }
 });
 
+
 function mostPopular(result){
   //res.render('index.handlebars',result);
   var jsonfile = result;
