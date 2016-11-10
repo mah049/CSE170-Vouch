@@ -29,5 +29,5 @@ exports.dealView = function(req,res){
   //if(data.deal.Place==""){
   //  var retData = 
   //}
-  res.render('dealViews.handlebars',data);
+  res.render('dealViews.handlebars',data.deal[1]);
 }
