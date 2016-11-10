@@ -2,15 +2,15 @@
 var data = require('../../data.json');
 var test = require('../../test.json');
 
-exports.getDeals = function(req,res){
+exports.getDeals = function(req, res) {
   res.render('index.handlebars',data);
 }
 
-exports.view = function(req, res){
+exports.view = function(req, res) {
   res.render('index.handlebars', data );
 }
 
-exports.mostPopular = function(req,res){  
+exports.mostPopular = function(req, res) {  
   var manipulate = data;
   var sortByUpvote = manipulate.deal.sort(function(a, b) {
     return parseFloat(b.Upvote) - parseFloat(a.Upvote);
@@ -18,14 +18,24 @@ exports.mostPopular = function(req,res){
   var convertToString = JSON.stringify(sortByUpvote);
   console.log(convertToString);
   var convertToJSON = "{ \"deal\":"+convertToString+"}";
-  var yes = JSON.stringify(convertToJSON);
-  console.log(yes);
   var ret = JSON.parse(convertToJSON);
   console.log(typeof ret);
   res.json(ret);
 }
 
-exports.dealView = function(req,res){  
+exports.mostRecent = function(req, res) {
+  var manipulate = data;
+  var sortByTimestamp = manipulate.deal.sort(function(a, b) {
+    return parseFloat(b.Timestamp) - parseFloat(a.Timestamp);
+  });
+  var convertToString = JSON.stringify(sortByTimestamp);
+  console.log(convertToString);
+  var convertToJSON = "{ \"deal\":"+convertToString+"}";
+  console.log(convertToJSON);
+  res.json(JSON.parse(convertToJSON));
+}
+
+exports.dealView = function(req,res) {  
   var place = req.params.places;
   for(var i = 0; i<data.deal.length;i++){
     if(data.deal[i].Place==place){
