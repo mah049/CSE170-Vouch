@@ -21,6 +21,6 @@ function mostPopular(result){
     var deal = list[i].Deal;
     var upvote = list[i].Upvote;
     $("#deal-container").append(
-  	"<a href = \"dealView.html\" > <p id=\"newDeals\">"+ location + " is the place <br>"+ deal+ " is the deal <br>"+upvote+" is the upvote </p> </a>"); 
+  	"<a href = \""+location+"\"> <p id=\"newDeals\">"+ location + " is the place <br>"+ deal+ " is the deal <br>"+upvote+" is the upvote </p> </a>"); 
   }
 }
