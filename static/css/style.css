@@ -35,10 +35,6 @@
   	align-items: center;
 }
 
-#orange-border {
-	outline: 3px	solid black;
-}
-
 #buttonwidth {
 	width: 30%;
 	height: 50%;
@@ -104,4 +100,12 @@ p {
 
 a { 
   text-decoration: none; color: #008080; 
+}
+
+h1 {
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
 }

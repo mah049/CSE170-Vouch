@@ -1,45 +1,43 @@
 <html>
   <head>
-    <meta charset="utf-8">
+  	<meta charset="utf-8">
     <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vouch</title>
-    <script src="https://code.jquery.com/jquery.js"></script>
+  	<script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-          <!-- add header -->
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand topnav" href="/" id="center-nav"><img id="logo" src="/images/vouchlogo.png" class="img-responsive"></a>
-              <a class="navbar-brand topnav" align="left" href="/addNew.html"><button type="button" class="btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
-          </div>
-          <!-- add menu -->
-          <div class="collapse navbar-collapse" id="navbar1">
-              <ul class="nav navbar-nav navbar-right">
-                  <li><a href="/contact.html">Contact</a></li>
-                  <li><a href="/login.html">Log In</a></li>
-              </ul>
+    	<div class="container">
+       		<!-- add header -->
+        	<div class="navbar-header">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                	<span class="sr-only">Toggle navigation</span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+            	</button>
+            	<a class="navbar-brand topnav" href="/" id="center-nav"><img id="logo" src="/images/vouchlogo.png" class="img-responsive"></a>
+            	<a class="navbar-brand topnav" align="left" href="/addNew.html"><button type="button" class="btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
+        	</div>
+        	<!-- add menu -->
+        	<div class="collapse navbar-collapse" id="navbar1">
+            	<ul class="nav navbar-nav navbar-right">
+                	<li><a href="/contact.html">Contact</a></li>
+                	<li><a href="/login.html">Log In</a></li>
+            	</ul>
             <!-- add search form -->
-          </div>
-      </div>
-  </nav>
-<div class="container-fluid">
-    <div class="row" id="buffer"></div>
-    <div class="row"> 
-        <div class="col-md-4"> 
-          <p>You are in San Diego</p>
-        </div>
-        <div class="col-sm-6 col-sm-offset-3">
+        	</div>
+    	</div>
+	</nav>
+
+    <div class="container-fluid">
+      <div class="row" id="buffer"></div>
+    <div class="row top-buffer"> 
+    <div class="col-sm-6 col-sm-offset-3">
             <div id="imaginary_container"> 
                 <div class="input-group stylish-input-group">
                     <input type="text" class="form-control"  placeholder="Search" >
@@ -52,20 +50,21 @@
             </div>
         </div>
       </div>
+    </div>
     <div class="row" id="buffer"></div>
       <div class="row"> 
-        <div class="col-md-6" id="margin-left-align">
-      <h2 style="margin-top:0px"><b>{{Place}}</b></h2>
+        <div class="col-xs-12 col-md-6" id="margin-left-right-align">
+      <div class="well"><b>{{Place}}</b></h2>
       <br> {{Upvote}} Vouches!
+      </div>
     </div>  
-    <div class="col-md-6" align="middle" id="margin-right-align">
-      <h2 style="margin-top:0px">Images of the Food</h2>
+    <div class="col-md-4" align="middle" id="margin-right-align">
     </div>
     </div>
     <div class="row" id="small-buffer"></div>
       <div class="row">
-        <div class="col-md-6" id="margin-left-align">
-      <div style="border: 1px solid black; display: inline-block">
+        <div class="col-xs-12 col-md-6" id="margin-left-right-align">
+      <div class="well">
       1956 Bacon Street, San Diego <br> CA 92107 <br> Phone: (619)224-4770 <br> Hours: 11 AM - 11 PM 
         </div>
     </div>
@@ -77,23 +76,23 @@
     </div>  
     <div class="row" id="buffer"></div>
       <div class="row" id="margin-left-right-align">
-          <div class="span12" align="middle" id="orange-border">
+          <div class="well" align="middle">
             {{Deal}} <br> Available Starting at 4:00 PM until closing <br> No Coupons Necessary 
           </div>
-    </div>
+      </div>
       <div class="row">
-        <div class="col-md-12 id="margin-left-right-align">
-      <p><h1 align="middle">
-      Do you vouch for this?
-      <a id="thumbs-up" href="/dealView/{{Place}}/upVote">
-        <img src="/images/ThumbsUp.JPG" alt="HTML5 icon">
-      </a>
-        <a id="thumbs-down" href="/dealView/{{Place}}/downVote">
-        <img src="/images/ThumbsDown.JPG" alt="HTML5 icon">
-      </a>
-      </h1></p>
-    </div>
-    </div>    
+        <div class="col-md-12" id="margin-left-right-align">
+          <p><h1 align="middle">
+          Do you vouch for this?
+          <a id="thumbs-up" href="/dealView/{{Place}}/upVote">
+          <img src="/images/ThumbsUp.JPG" alt="HTML5 icon">
+          </a>
+          <a id="thumbs-down" href="/dealView/{{Place}}/downVote">
+          <img src="/images/ThumbsDown.JPG" alt="HTML5 icon">
+          </a>
+          </h1></p>
+        </div>
+      </div>    
     </div> 
 
   </body>
