@@ -36,6 +36,7 @@ app.get('/test',routes.getDeals)
 app.get('/', routes.view);
 app.get('/mostPopular', routes.mostPopular);
 app.get('/mostRecent', routes.mostRecent);
+app.get('/categories', routes.categories);
 app.get('/add', add.addNew);
 app.get('/dealView/:places',routes.dealView);
 app.get('/dealView/:places/upVote',routes.upVote);

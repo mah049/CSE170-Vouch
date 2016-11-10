@@ -3,30 +3,35 @@
 	 "Place" : "Pizzaport",
 	 "Deal" : "20% Off",
 	 "Upvote" : 100,
-	 "Timestamp" : 1478763930677
+	 "Timestamp" : 1478763930677,
+	 "Category" : "Restaurants"
 	},
 	{
 	 "Place": "McDonalds",
 	 "Deal" : "20% Off",
 	 "Upvote" : 20,
-	 "Timestamp" : 1478763931677
+	 "Timestamp" : 1478763931677,
+	 "Category" : "Events"
 	},
 	{
 	 "Place": "BurgerKing",
 	 "Deal" : "10% Off",
 	 "Upvote" : 10,
-	 "Timestamp" : 1478763932677
+	 "Timestamp" : 1478763932677,
+	 "Category" : "Groceries"
 	},
 	{
 	 "Place": "Wendy's",
 	 "Deal" : "20% Off",
 	 "Upvote" : 9,
-	 "Timestamp" : 1478763933677 
+	 "Timestamp" : 1478763933677,
+	 "Category" : "Restaurants" 
 	},
 	{
 	 "Place": "Carl's Jr.",
 	 "Deal" : "20% Off",
 	 "Upvote" : 40,
-	 "Timestamp" : 1478763934677
+	 "Timestamp" : 1478763934677,
+	 "Category" : "Events"
 	}]
 }

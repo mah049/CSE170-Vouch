@@ -6,7 +6,8 @@ exports.addNew = function(req, res) {
 		"Place": req.query.venue,
 		"Deal": req.query.deal,
 		"Upvote": 0,
-		"Timestamp": timeAdded.getTime()
+		"Timestamp": timeAdded.getTime(),
+		"Category" : req.query.categories
 	}
 	console.log(newDeal);
 	data.deal.push(newDeal);
