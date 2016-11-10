@@ -59,28 +59,30 @@
 		  		<p>Filter</p>
 				<form>
 					<div class="radio">
-				      <label><input type="radio" name="optradio" id="mostPopular" >Most Popular</label>
+				      <label><input type="radio" name="optradio" id="mostPopular" {{mostPopular}}>Most Popular</label>
 				    </div>
 				    <div class="radio">
-				      <label><input type="radio" name="optradio" id="mostRecent">Most Recent</label>
+				      <label><input type="radio" name="optradio" id="mostRecent" {{mostRecent}}>Most Recent</label>
 				    </div>
 				    <div class="radio">
 				      <label><input type="radio" name="optradio" id="leastDistance" disabled>Least Distance</label>
 				    </div>
 				</form>
 				<p>Categories</p>
-				<div class="checkbox">
-  					<label><input type="checkbox" id="checkAll">All</label>
-				</div>
-				<div class="checkbox">
-  					<label><input type="checkbox" class="check" id="restaurants">Restaurants</label>
-				</div>
-				<div class="checkbox">
-  					<label><input type="checkbox" class="check" id="events">Events</label>
-				</div>
-				<div class="checkbox">
-  					<label><input type="checkbox" class="check" id="groceries">Groceries</label>
-				</div>
+        <form action="/categories" method="get" id="categories">
+  				<div class="checkbox">
+    					<label><input type="checkbox" class="check" name="all" id="checkAll" {{all}}>All</label>
+  				</div>
+  				<div class="checkbox">
+    					<label><input type="checkbox" class="check" name="restaurants" {{restaurants}}>Restaurants</label>
+  				</div>
+  				<div class="checkbox">
+    					<label><input type="checkbox" class="check" name="events" {{events}}>Events</label>
+  				</div>
+  				<div class="checkbox">
+    					<label><input type="checkbox" class="check" name="groceries" {{groceries}}>Groceries</label>
+  				</div>
+        </form>
 	  		</div>
 		  	<div class="col-sm-8" align = "middle"> 
 		      	<!-- This is where the image used to be  

@@ -2,19 +2,11 @@ $('#checkAll').click(function () {
   $('.check').prop('checked', $(this).prop('checked'));
 });
 
-$('.check').click(function () {
-  var rest = false, events = false, groc = false;
-  if($('#restaurants').is(':checked')) {
-    rest = true;
-  } 
-  if($('#events').is(':checked')) {
-    events = true;
-  }
-  if($('#groceries').is(':checked')) {
-    groc = true;
-  }
-
-  
+$(document).ready(function (e) {
+  $('.check').click(function (e) {
+    $("#categories").submit();
+    $.get("/categories", reRender);
+  });
 });
 
 $('#mostPopular').click(function() {

@@ -1,70 +1,135 @@
 // Get all of our friend data
 var data = require('../../data.json');
 var test = require('../../test.json');
-var mostRecentFilter = clone(data);
-var mostRecentCategory = clone(data);
+var categorized = clone(data);
 
 exports.getDeals = function(req, res) {
-  res.render('index.handlebars',data);
+  res.render('index.handlebars', data);
 }
 
 exports.view = function(req, res) {
-  res.render('index.handlebars', data );
+  var temp = data;
+  if (data.isCategorized) {
+    temp = categorized;
+  }
+  console.log(temp);
+  res.render('index.handlebars', temp);
 }
 
 exports.categories = function(req, res) {
-  res.json(mostRecentFilter);
-}
-
-exports.restaurants = function(req, res) {
-  console.log("wtf");
-  mostRecentCategory = clone(mostRecentFilter);
-  var list = mostRecentCategory.deal;
-  for(var i=0; i<list.length; i++) {
-    if(mostRecentCategory.deal[i].Category!="Restaurants") {
-      delete mostRecentCategory.deal[i];
-      console.log("deleted some shit\n");
-    }
+  data.isCategorized = false;
+  var all = false, rest = false; events = false, groc = false;
+  if (req.query.all=="on") {
+    data.all = "checked";
+    all = true;
+    data.isCategorized = true;
+  } else {
+    data.all = "";
   }
-  console.log("\n" + JSON.stringify(data) + "\n");
-  res.json(mostRecentCategory);
+  if (req.query.restaurants=="on") {
+    data.restaurants = "checked";
+    rest = true;
+    data.isCategorized = true;
+  } else {
+    data.restaurants = "";
+  }
+  if (req.query.events=="on") {
+    data.events = "checked";
+    events = true;
+    data.isCategorized = true;
+  } else {
+    data.events = "";
+  }
+  if (req.query.groceries=="on") {
+    data.groceries = "checked";
+    groc = true;
+    data.isCategorized = true;
+  } else {
+    data.groceries = "";
+  }
+  
+  categorized = clone(data);
+  var list = categorized.deal;
+  var i = list.length;
+  while (i--) {
+    if (all) continue;
+    if (!all && !rest && !events && !groc) continue;
+    if ((list[i].Category=="Restaurants" && rest) ||
+        (list[i].Category=="Events" && events) ||
+        (list[i].Category=="Groceries" && groc)) {
+      continue;
+    }
+    list.splice(i,1);
+  }
+  res.render('index.handlebars', categorized);
 }
 
-exports.events = function(req, res) {
-
-}
-
-exports.groceries = function(req, res) {
-
-}
-
-exports.mostPopular = function(req, res) {  
+exports.mostPopular = function(req, res) {
+  data.mostPopular = "checked";
+  categorized.mostPopular = "checked";
+  data.mostRecent = "";
+  categorized.mostRecent = "";
+  data.leastDistance = "";  
+  categorized.leastDistance = "";
   var manipulate = data;
+  var retCategorized;
+  if (data.isCategorized) {
+    var sortByUpvote = categorized.deal.sort(function(a, b) {
+      return parseFloat(b.Upvote) - parseFloat(a.Upvote);
+    });
+    var convertToString = JSON.stringify(sortByUpvote);
+    var convertToJSON = "{ \"deal\":"+convertToString+"}";
+    retCategorized = JSON.parse(convertToJSON);
+  }
   var sortByUpvote = manipulate.deal.sort(function(a, b) {
     return parseFloat(b.Upvote) - parseFloat(a.Upvote);
   });
   var convertToString = JSON.stringify(sortByUpvote);
   var convertToJSON = "{ \"deal\":"+convertToString+"}";
   var ret = JSON.parse(convertToJSON);
-  mostRecentFilter = ret;
-  res.json(ret);
+  if (data.isCategorized)
+    res.json(retCategorized);
+  else
+    res.json(ret);
 }
 
 exports.mostRecent = function(req, res) {
+  data.mostPopular = "";
+  categorized.mostPopular = "";
+  data.mostRecent = "checked";
+  categorized.mostRecent = "checked";
+  data.leastDistance = "";
+  categorized.leastDistance = "";
   var manipulate = data;
+  var retCategorized;
+  if (data.isCategorized) {
+    var sortByTimestamp = categorized.deal.sort(function(a, b) {
+      return parseFloat(b.Timestamp) - parseFloat(a.Timestamp);
+    });
+    var convertToString = JSON.stringify(sortByTimestamp);
+    var convertToJSON = "{ \"deal\":"+convertToString+"}";
+    retCategorized = JSON.parse(convertToJSON);
+  }
   var sortByTimestamp = manipulate.deal.sort(function(a, b) {
     return parseFloat(b.Timestamp) - parseFloat(a.Timestamp);
   });
   var convertToString = JSON.stringify(sortByTimestamp);
   var convertToJSON = "{ \"deal\":"+convertToString+"}";
   var ret = JSON.parse(convertToJSON);
-  mostRecentFilter = ret;
-  res.json(ret);
+  if (data.isCategorized)
+    res.json(retCategorized);
+  else
+    res.json(ret);
 }
 
 exports.upVote = function(req,res) {
   var place = req.params.places;
-  for(var i = 0; i<data.deal.length; i++){
+  for(var i=0; i<categorized.deal.length; i++) {
+    if(categorized.deal[i].Place==place) {
+      categorized.deal[i].Upvote+=1;
+    }
+  }
+  for(var i=0; i<data.deal.length; i++){
     if(data.deal[i].Place==place){
        data.deal[i].Upvote+=1;
     }   
@@ -74,6 +139,11 @@ exports.upVote = function(req,res) {
 
 exports.downVote = function(req,res) {
   var place = req.params.places;
+  for(var i=0; i<categorized.deal.length; i++) {
+    if(categorized.deal[i].Place==place) {
+      categorized.deal[i].Upvote-=1;
+    }
+  }
   for(var i = 0; i<data.deal.length; i++){
     if(data.deal[i].Place==place){
       data.deal[i].Upvote-=1;

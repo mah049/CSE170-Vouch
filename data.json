@@ -1,4 +1,12 @@
-{ 
+{
+	"isCategorized" : false,
+	"mostPopular" : "",
+	"mostRecent" : "",
+	"leastDistance" : "",
+	"all" : "",
+	"restaurants" : "",
+	"events" : "",
+	"groceries" : "", 
 	"deal" : [{
 	 "Place" : "Pizzaport",
 	 "Deal" : "20% Off",
