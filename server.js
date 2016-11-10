@@ -32,8 +32,9 @@ app.use(app.router);
 app.use(express.static(__dirname + '/static'));
 app.use(express.static(__dirname + '/node_modules'));
 
-app.get('/test',routes.getDeals)
+app.get('/test',routes.getDeals);
 app.get('/', routes.view);
+app.get('/login', routes.login);
 app.get('/mostPopular', routes.mostPopular);
 app.get('/mostRecent', routes.mostRecent);
 app.get('/categories', routes.categories);
@@ -41,6 +42,9 @@ app.get('/add', add.addNew);
 app.get('/dealView/:places',routes.dealView);
 app.get('/dealView/:places/upVote',routes.upVote);
 app.get('/dealView/:places/downVote',routes.downVote);
+app.get('/failedLogin', function(req,res){
+	res.sendfile('./static/failedLogin.html');
+});
 
 //app.get('/', function(req, res) {
 //    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));

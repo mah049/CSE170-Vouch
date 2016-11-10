@@ -7,6 +7,8 @@
 	"restaurants" : "",
 	"events" : "",
 	"groceries" : "", 
+	"loggedIn" : false,
+	"currentUsername" : "",
 	"deal" : [{
 	 "Place" : "Pizzaport",
 	 "Deal" : "20% Off",
@@ -19,14 +21,14 @@
 	 "Deal" : "20% Off",
 	 "Upvote" : 20,
 	 "Timestamp" : 1478763931677,
-	 "Category" : "Events"
+	 "Category" : "Restaurants"
 	},
 	{
 	 "Place": "BurgerKing",
 	 "Deal" : "10% Off",
 	 "Upvote" : 10,
 	 "Timestamp" : 1478763932677,
-	 "Category" : "Groceries"
+	 "Category" : "Restaurants"
 	},
 	{
 	 "Place": "Wendy's",
@@ -40,6 +42,15 @@
 	 "Deal" : "20% Off",
 	 "Upvote" : 40,
 	 "Timestamp" : 1478763934677,
-	 "Category" : "Events"
-	}]
+	 "Category" : "Restaurants"
+	}],
+	"login" : [
+		{
+			"username": "Alok",
+			"password": "isawesome"
+		},
+		{
+
+		}
+	]
 }

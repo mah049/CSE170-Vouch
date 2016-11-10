@@ -25,9 +25,13 @@
         	</div>
         	<!-- add menu -->
         	<div class="collapse navbar-collapse" id="navbar1">
-            	<ul class="nav navbar-nav navbar-right">
-                	<li><a href="/contact.html">Contact</a></li>
+            	<ul class="nav navbar-nav navbar-right"> 
+                  <li><a href="/contact.html">Contact</a></li>
+                  {{#if loggedIn}}
+                  <li><a>Hello, {{currentUsername}}!</a></li>
+                  {{else}}
                 	<li><a href="/login.html">Log In</a></li>
+                  {{/if}}
             	</ul>
             <!-- add search form -->
         	</div>

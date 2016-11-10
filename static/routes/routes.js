@@ -160,6 +160,20 @@ exports.dealView = function(req,res) {
   }
 }
 
+exports.login = function(req,res) {
+  for(var i = 0; i<data.login.length; i++){
+    if(data.login[i].username==req.query.username
+      &&data.login[i].password==req.query.password){
+      console.log("Login successful");
+      data.currentUsername=req.query.username;
+      data.loggedIn=true;
+      res.render('index.handlebars',data);
+      return;
+    }
+  }
+  res.redirect('/failedLogin');   
+}
+
 function clone(obj) {
     var copy;
 
