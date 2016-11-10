@@ -1,34 +1,38 @@
 <html>
   <head>
+    <meta charset="utf-8">
+    <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vouch</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
   </head>
   <body>
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" align="left" href="addNew.html"><button type="button" class="btn"><span class="glyphicon glyphicon-plus"></span></button></a>
-                <a class="navbar-brand topnav" href="/" id="center-nav"><img id="logo" src="images/vouchlogo.png" class="img-responsive"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="login.html">Log In</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- add header -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand topnav" href="/" id="center-nav"><img id="logo" src="images/vouchlogo.png" class="img-responsive"></a>
+              <a class="navbar-brand topnav" align="left" href="addNew.html"><button type="button" class="btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
+          </div>
+          <!-- add menu -->
+          <div class="collapse navbar-collapse" id="navbar1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/">Contact</a></li>
+                  <li><a href="login.html">Log In</a></li>
+              </ul>
+            <!-- add search form -->
+          </div>
+      </div>
+  </nav>
     <div class="container-fluid">
 
       <div class="row" id="buffer"></div>
@@ -67,9 +71,9 @@
         </div>
     </div>
     <div class="col-md-6" align="middle" id="margin-right-align">
-      <img src="images/CookieImages.JPG">
-      <img src="images/CookieImages.JPG">
-      <img src="images/CookieImages.JPG">
+      <img src="/images/CookieImages.JPG">
+      <img src="/images/CookieImages.JPG">
+      <img src="/images/CookieImages.JPG">
     </div>
     </div>  
     <div class="row" id="buffer"></div>
@@ -83,10 +87,10 @@
       <p><h1 align="middle">
       Do you vouch this?
       <a href="/">
-        <img src="images/ThumbsUp.JPG" alt="HTML5 icon">
+        <img src="/images/ThumbsUp.JPG" alt="HTML5 icon">
       </a>
         <a href="/">
-        <img src="images/ThumbsDown.JPG" alt="HTML5 icon">
+        <img src="/images/ThumbsDown.JPG" alt="HTML5 icon">
       </a>
       </h1></p>
     </div>
