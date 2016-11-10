@@ -35,6 +35,7 @@ app.use(express.static(__dirname + '/node_modules'));
 app.get('/test',routes.getDeals)
 app.get('/', routes.view);
 app.get('/mostPopular', routes.mostPopular);
+app.get('/mostRecent', routes.mostRecent);
 app.get('/add', add.addNew);
 app.get('/dealView/:places',routes.dealView);
 

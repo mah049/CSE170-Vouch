@@ -62,11 +62,11 @@
 				      <label><input type="radio" name="optradio" id="mostPopular">Most Popular</label>
 				    </div>
 				    <div class="radio">
-				      <label><input type="radio" name="optradio" id="mostRecent" disabled>Most Recent</label>
+				      <label><input type="radio" name="optradio" id="mostRecent">Most Recent</label>
 				    </div>
 				    <div class="radio">
 
-				      <label><input type="radio" name="optradio" disabled>Least Distance</label>
+				      <label><input type="radio" name="optradio" id="leastDistance" disabled>Least Distance</label>
 				    </div>
 				</form>
 				<p>Categories</p>
@@ -89,13 +89,14 @@
 		      		<img src="images/exampleDeal.png" alt="HTML5 icon" class="img-responsive">
 		      	</a>
 				-->
-		    <div class="well">
 		    <div id="deal-container">
-	  		  {{#each deal}}
-				  <a id="deals" href="/dealView/{{Place}}">
-				  <p id="newDeals">{{Place}} is the place <br> {{Deal}} is the deal <br> {{Upvote}} is the upvote </p>
-				  </a>
-		      {{/each}}
+	  		{{#each deal}}
+				<a id="deals" href="/dealView/{{Place}}">
+					<div class="well">
+				<p id="newDeals">{{Place}} is the place <br> {{Deal}} is the deal <br> {{Upvote}} is the upvote </p>
+					</div>
+				</a>
+		    {{/each}}
 		    </div>
 		    </div>
 		    <div class="col-sm-2" align="right" id="margin-right-align"> 
