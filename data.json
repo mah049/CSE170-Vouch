@@ -1,27 +1,32 @@
 { 
 	"deal" : [{
-	 "Place": "Pizzaport",
+	 "Place" : "Pizzaport",
 	 "Deal" : "20% Off",
-	 "Upvote" : 100
+	 "Upvote" : 100,
+	 "Timestamp" : 1478763930677
 	},
 	{
 	 "Place": "McDonalds",
 	 "Deal" : "20% Off",
-	 "Upvote" : 20
+	 "Upvote" : 20,
+	 "Timestamp" : 1478763931677
 	},
 	{
 	 "Place": "BurgerKing",
 	 "Deal" : "10% Off",
-	 "Upvote" : 10
+	 "Upvote" : 10,
+	 "Timestamp" : 1478763932677
 	},
 	{
 	 "Place": "Wendy's",
 	 "Deal" : "20% Off",
-	 "Upvote" : 6 
+	 "Upvote" : 6,
+	 "Timestamp" : 1478763933677 
 	},
 	{
 	 "Place": "Carl's Jr.",
 	 "Deal" : "20% Off",
-	 "Upvote" : 40
+	 "Upvote" : 40,
+	 "Timestamp" : 1478763934677
 	}]
 }
