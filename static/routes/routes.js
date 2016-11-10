@@ -12,15 +12,37 @@ exports.view = function(req, res) {
 
 exports.mostPopular = function(req, res) {  
   var manipulate = data;
+  console.log("\n"+manipulate+"\n");
   var sortByUpvote = manipulate.deal.sort(function(a, b) {
     return parseFloat(b.Upvote) - parseFloat(a.Upvote);
   });
+  console.log(sortByUpvote);
   var convertToString = JSON.stringify(sortByUpvote);
   console.log(convertToString);
   var convertToJSON = "{ \"deal\":"+convertToString+"}";
   var ret = JSON.parse(convertToJSON);
   console.log(typeof ret);
   res.json(ret);
+}
+
+exports.upVote = function(req,res) {
+  var place = req.params.places;
+  for(var i = 0; i<data.deal.length; i++){
+    if(data.deal[i].Place==place){
+       data.deal[i].Upvote+=1;
+    }   
+  }
+  res.redirect('/');
+}
+
+exports.downVote = function(req,res) {
+  var place = req.params.places;
+  for(var i = 0; i<data.deal.length; i++){
+    if(data.deal[i].Place==place){
+      data.deal[i].Upvote-=1;
+    }
+  }
+  res.redirect('/');
 }
 
 exports.mostRecent = function(req, res) {
@@ -37,7 +59,7 @@ exports.mostRecent = function(req, res) {
 
 exports.dealView = function(req,res) {  
   var place = req.params.places;
-  for(var i = 0; i<data.deal.length;i++){
+  for(var i = 0; i<data.deal.length; i++){
     if(data.deal[i].Place==place){
         res.render('dealViews.handlebars', data.deal[i]);
     }

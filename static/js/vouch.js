@@ -14,6 +14,10 @@ $('#mostRecent').click(function() {
   }
 });
 
+$('thumbs-up').click(function(){
+
+});
+
 function reRender(result) {
   var jsonfile = result;
   var list = jsonfile.deal;

@@ -38,6 +38,8 @@ app.get('/mostPopular', routes.mostPopular);
 app.get('/mostRecent', routes.mostRecent);
 app.get('/add', add.addNew);
 app.get('/dealView/:places',routes.dealView);
+app.get('/dealView/:places/upVote',routes.upVote);
+app.get('/dealView/:places/downVote',routes.downVote);
 
 //app.get('/', function(req, res) {
 //    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));
