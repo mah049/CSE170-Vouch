@@ -12,7 +12,6 @@ exports.view = function(req, res) {
   if (data.isCategorized) {
     temp = categorized;
   }
-  console.log(temp);
   res.render('index.handlebars', temp);
 }
 
