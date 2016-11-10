@@ -26,11 +26,10 @@ exports.mostPopular = function(req,res){
 }
 
 exports.dealView = function(req,res){  
-  
   var place = req.params.places;
   for(var i = 0; i<data.deal.length;i++){
     if(data.deal[i].Place==place){
-        res.render('dealViews.handlebars',data.deal[i]);
+        res.render('dealViews.handlebars', data.deal[i]);
     }
   }
 }

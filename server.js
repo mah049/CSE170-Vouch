@@ -34,10 +34,10 @@ app.use(express.static(__dirname + '/node_modules'));
 
 app.get('/test',routes.getDeals)
 app.get('/', routes.view);
-app.get('/mostPopular',routes.mostPopular);
+app.get('/mostPopular', routes.mostPopular);
 app.get('/add', add.addNew);
-app.get('/:places',routes.dealView)
-app.get('/dealView',routes.dealView)
+app.get('/:places', routes.dealView)
+app.get('/dealView', routes.dealView)
 
 //app.get('/', function(req, res) {
 //    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));
