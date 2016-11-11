@@ -45,6 +45,7 @@ app.get('/dealView/:places/downVote',routes.downVote);
 app.get('/failedLogin', function(req,res){
 	res.sendfile('./static/failedLogin.html');
 });
+app.get('/searchJson',routes.searchJson);
 
 //app.get('/', function(req, res) {
 //    res.sendFile(express.static(path.join(__dirname + '/static/addNew.html')));

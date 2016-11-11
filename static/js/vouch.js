@@ -21,6 +21,39 @@ $('#mostRecent').click(function() {
   }
 });
 
+ $('#search').keyup(function(){
+            var searchField = $('#search').val();
+            var regex = new RegExp(searchField, "i");
+            var output = '<div class="row">';
+            var count = 1;
+            if($('#search').val().length > 0){
+            $.getJSON('/searchJson', function(data) {
+              $.each(data, function(key, val){
+                if ((val.Place.search(regex) != -1) || (val.Category.search(regex) != -1)) {
+                  output += '<div class="col-md-6 well">';
+                  output += '<div class="col-md-3"></div>';
+                  output += '<div class="col-md-7">';
+                  output += '<h5 align=\"middle\"><a href=\"dealView/'+ val.Place + '">'+val.Place+'</a></h5>';
+                  output += '<h5 align="middle">'+ val.Upvote + ' vouches</h5>'
+                  output += '</div>';
+                  output += '</div>';
+                  if(count%2 == 0){
+                    output += '</div><div class="row">'
+                  }
+                  count++;
+                }
+              });
+              output += '</div>';
+              $('#update').html(output);
+            });
+          }
+            console.log($("#search").val().length);
+            if($('#search').val().length == 0){
+              console.log("hello");
+              $("#update").empty();
+            };
+        });
+
 function reRender(result) {
   console.log(result);
   var jsonfile = result;

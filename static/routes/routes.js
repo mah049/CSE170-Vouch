@@ -63,6 +63,12 @@ exports.categories = function(req, res) {
   res.render('index.handlebars', categorized);
 }
 
+exports.searchJson = function(req,res) {
+  var manipulate = data.deal;
+  console.log(manipulate);
+  res.json(manipulate);
+}
+
 exports.mostPopular = function(req, res) {
   data.mostPopular = "checked";
   categorized.mostPopular = "checked";
