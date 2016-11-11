@@ -62,6 +62,6 @@ function reRender(result) {
   for (var i=0; i<list.length; i++) {
     if (list[i]==null) continue;
     $("#deal-container").append(
-      "<a href = \"dealView/"+list[i].Place+"\"> <div class=\"well\"> <p id=\"newDeals\">"+list[i].Place+" is the place <br>"+list[i].Deal+" is the deal <br>"+list[i].Upvote+" is the number of upvotes </p> </div> </a>");
+      "<a href = \"dealView/"+list[i].Place+"\"> <div class=\"well\"> <p id=\"newDeals\">"+list[i].Place+"<br>"+list[i].Deal+"<br>"+list[i].Upvote+" Vouches</p> </div> </a>");
   }
 }

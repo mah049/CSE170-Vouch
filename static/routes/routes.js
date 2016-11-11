@@ -180,6 +180,10 @@ exports.login = function(req,res) {
   res.redirect('/failedLogin');   
 }
 
+exports.signOut = function(req,res) {
+  data.loggedIn=false;
+  res.redirect('/');
+}
 function clone(obj) {
     var copy;
 

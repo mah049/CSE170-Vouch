@@ -43,14 +43,31 @@
 	 "Upvote" : 40,
 	 "Timestamp" : 1478763934677,
 	 "Category" : "Restaurants"
-	}],
+	},
+	{
+	 "Place": "Ralph's",
+	 "Deal" : "20% Off",
+	 "Upvote" : 10,
+	 "Timestamp" : 1478769829277,
+	 "Category" : "Groceries"
+	},
+	{
+	 "Place": "Concert",
+	 "Deal" : "Free",
+	 "Upvote" : 3,
+	 "Timestamp" : 1237845390,
+	 "Category" : "Events"
+
+	}
+	],
 	"login" : [
 		{
 			"username": "Alok",
-			"password": "isawesome"
+			"password": "Alok"
 		},
 		{
-
+			"username": "Mark",
+			"password": "Mark"
 		}
 	]
 }

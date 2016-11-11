@@ -29,6 +29,7 @@
                   <li><a href="/contact.html">Contact</a></li>
                   {{#if loggedIn}}
                   <li><a>Hello, {{currentUsername}}!</a></li>
+                  <li><a href="/signOut">Signout</a></li>
                   {{else}}
                 	<li><a href="/login.html">Log In</a></li>
                   {{/if}}
@@ -99,7 +100,7 @@
 	  		{{#each deal}}
 				<a id="deals" href="/dealView/{{Place}}">
 					<div class="well">
-				<p id="newDeals">{{Place}} is the place <br> {{Deal}} is the deal <br> {{Upvote}} is the number of upvotes </p>
+				<p id="newDeals">{{Place}}<br>{{Deal}}<br>{{Upvote}} Vouches</p>
 					</div>
 				</a>
 		    {{/each}}
