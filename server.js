@@ -42,6 +42,7 @@ app.get('/add', add.addNew);
 app.get('/dealView/:places',routes.dealView);
 app.get('/dealView/:places/upVote',routes.upVote);
 app.get('/dealView/:places/downVote',routes.downVote);
+app.get('/homepage2', routes.view_test)
 app.get('/failedLogin', function(req,res){
 	res.sendfile('./static/failedLogin.html');
 });

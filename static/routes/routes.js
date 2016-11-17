@@ -15,6 +15,14 @@ exports.view = function(req, res) {
   res.render('index.handlebars', temp);
 }
 
+exports.view_test = function(req, res) {
+  var temp = data;
+  if (data.isCategorized) {
+    temp = categorized;
+  }
+  res.render('index_test.handlebars', temp);
+}
+
 exports.categories = function(req, res) {
   data.isCategorized = false;
   var all = false, rest = false; events = false, groc = false;

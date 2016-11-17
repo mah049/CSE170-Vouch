@@ -51,7 +51,7 @@ $('#mostRecent').click(function() {
             if($('#search').val().length == 0){
               console.log("hello");
               $("#update").empty();
-            };
+            }
         });
 
 function reRender(result) {

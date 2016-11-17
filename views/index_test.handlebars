@@ -1,0 +1,116 @@
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vouch</title>
+  	<script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    	<div class="container">
+       		<!-- add header -->
+        	<div class="navbar-header">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                	<span class="sr-only">Toggle navigation</span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+            	</button>
+            	<a class="navbar-brand topnav" href="/" id="center-nav"><img id="logo" src="/images/vouchlogo.png" class="img-responsive"></a>
+            	<a class="navbar-brand topnav" align="left" href="/addNew.html"><button type="button" class="btn-sm"><span class="glyphicon glyphicon-plus"></span> Add New Deal</button></a>
+        	</div>
+        	<!-- add menu -->
+        	<div class="collapse navbar-collapse" id="navbar1">
+            	<ul class="nav navbar-nav navbar-right"> 
+                  <li><a href="/contact.html">Contact</a></li>
+                  {{#if loggedIn}}
+                  <li><a>Hello, {{currentUsername}}!</a></li>
+                  <li><a href="/signOut">Signout</a></li>
+                  {{else}}
+                	<li><a href="/login.html">Log In</a></li>
+                  {{/if}}
+            	</ul>
+            <!-- add search form -->
+        	</div>
+    	</div>
+	</nav>
+
+
+    <div class="container-fluid">
+    	<div class="row" id="buffer"></div>
+		<div class="row top-buffer"> 
+		<div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    <input type="search" class="form-control" id="search" placeholder="search" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+                <div id="update"></div>
+            </div>
+        </div>
+		  	<div class="col-md-4"> 
+		  	</div>
+        </div>
+	  	<div class="row" id="small-buffer"></div>
+	  	<div class="row">
+		  	<div class="col-md-2" id="left-side-margin"> 
+		  		<p>Filter</p>
+				<form>
+					<div class="radio">
+				      <label><input type="radio" name="optradio" id="mostPopular" {{mostPopular}}>Most Popular</label>
+				    </div>
+				    <div class="radio">
+				      <label><input type="radio" name="optradio" id="mostRecent" {{mostRecent}}>Most Recent</label>
+				    </div>
+				    <div class="radio">
+				      <label><input type="radio" name="optradio" id="leastDistance" disabled>Least Distance</label>
+				    </div>
+				</form>
+				<p>Categories</p>
+        <form action="/categories" method="get" id="categories">
+  				<div class="checkbox">
+    					<label><input type="checkbox" class="check" name="all" id="checkAll" {{all}}>All</label>
+  				</div>
+  				<div class="checkbox">
+    					<label><input type="checkbox" class="check" name="restaurants" {{restaurants}}>Restaurants</label>
+  				</div>
+  				<div class="checkbox">
+    					<label><input type="checkbox" class="check" name="events" {{events}}>Events</label>
+  				</div>
+  				<div class="checkbox">
+    					<label><input type="checkbox" class="check" name="groceries" {{groceries}}>Groceries</label>
+  				</div>
+        </form>
+	  		</div>
+		  	<div class="col-sm-8" align = "middle"> 
+		      	<!-- This is where the image used to be  
+				<a href="dealView.html">
+		      		<img src="images/exampleDeal.png" alt="HTML5 icon" class="img-responsive">
+		      	</a>
+				-->
+		    <div id="deal-container">
+	  		{{#each deal}}
+				<a id="deals" href="/dealView/{{Place}}">
+					<div class="well">
+				<p id="newDeals">{{Place}}<br>{{Deal}}<br>{{Upvote}} Vouches</p>
+					</div>
+				</a>
+		    {{/each}}
+		    </div>
+		    </div>
+		    <div class="col-sm-2" align="right" id="margin-right-align"> 
+		    </div>
+	  	</div>
+    </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/js/vouch.js"></script>
+  </body>
+</html>
