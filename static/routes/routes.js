@@ -9,6 +9,7 @@ exports.getDeals = function(req, res) {
 
 exports.view = function(req, res) {
   var temp = data;
+  data['showAlternate']=false;
   if (data.isCategorized) {
     temp = categorized;
   }
@@ -17,10 +18,11 @@ exports.view = function(req, res) {
 
 exports.view_test = function(req, res) {
   var temp = data;
+  data['showAlternate']=true;
   if (data.isCategorized) {
     temp = categorized;
   }
-  res.render('index_test.handlebars', temp);
+  res.render('index.handlebars', temp);
 }
 
 exports.categories = function(req, res) {
