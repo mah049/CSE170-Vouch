@@ -21,7 +21,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand topnav" onclick = "submit()" id="center-nav"><img id="logo" src="/images/vouchlogo.png" class="img-responsive"></a>
+              <a class="navbar-brand topnav" href="/" id="center-nav"><img id="logo" src="/images/vouchlogo.png" class="img-responsive"></a>
               <a class="navbar-brand topnav" align="left" href="/addNew.html"><button type="button" class="btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
           </div>
           <!-- add menu -->
@@ -60,28 +60,12 @@
               </select>
               </div>
             </div>
-            <input type="submit" onclick="submit()" class="btn btn-default"> 
-            <a href="/" class="btn btn-default" onclick="butPress()">Cancel</a>
+            <input type="submit" class="btn btn-default"> 
+            <a href="/" class="btn btn-default">Cancel</a>
           </form>
         </div>
         <div class="col-md-4"></div>
       </div>
     </div>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-87910503-1', 'auto');
-    //ga('send', 'pageview');
-    function butPress(){
-      ga('send', 'event', 'cancel', 'click');
-    }
-
-    function submit(){
-      ga('send', 'event' , 'submit' , 'click');
-    }
-    </script>
   </body>
 </html>
