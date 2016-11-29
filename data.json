@@ -8,12 +8,14 @@
 	"groceries" : "", 
 	"loggedIn" : false,
 	"currentUsername" : "",
+
 	"deal" : [{
 	 "ID" : 0,
 	 "Place" : "Pizzaport",
 	 "Deal" : "20% Off",
 	 "Upvote" : 100,
 	 "Timestamp" : 1478763930677,
+	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants"
 	},
 	{
@@ -22,6 +24,7 @@
 	 "Deal" : "20% Off",
 	 "Upvote" : 20,
 	 "Timestamp" : 1478763931677,
+	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants"
 	},
 	{
@@ -30,6 +33,7 @@
 	 "Deal" : "10% Off",
 	 "Upvote" : 10,
 	 "Timestamp" : 1478763932677,
+	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants"
 	},
 	{
@@ -38,6 +42,7 @@
 	 "Deal" : "20% Off",
 	 "Upvote" : 9,
 	 "Timestamp" : 1478763933677,
+	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants" 
 	},
 	{
@@ -46,6 +51,7 @@
 	 "Deal" : "20% Off",
 	 "Upvote" : 40,
 	 "Timestamp" : 1478763934677,
+	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants"
 	},
 	{
@@ -54,6 +60,7 @@
 	 "Deal" : "20% Off",
 	 "Upvote" : 10,
 	 "Timestamp" : 1478769829277,
+	 "ValidUntil" : "forever",
 	 "Category" : "Groceries"
 	},
 	{
@@ -62,8 +69,8 @@
 	 "Deal" : "Free",
 	 "Upvote" : 3,
 	 "Timestamp" : 1237845390,
+	 "ValidUntil" : "forever",
 	 "Category" : "Events"
-
 	}
 	],
 	"login" : [

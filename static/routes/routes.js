@@ -32,6 +32,7 @@ exports.addNew = function(req, res) {
     "Deal": req.query.deal,
     "Upvote": 0,
     "Timestamp": timeAdded.getTime(),
+    "ValidUntil" : req.query.date,
     "Category" : req.query.categories
   }
   console.log(newDeal);
