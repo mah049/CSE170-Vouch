@@ -2,7 +2,6 @@
 var PORT = 3000;
 
 var	routes = require('./static/routes/routes.js');
-var add = require('./static/routes/add.js');
 
 // Express is a web framework for node.js
 // that makes nontrivial applications easier to build
@@ -38,10 +37,10 @@ app.get('/login', routes.login);
 app.get('/mostPopular', routes.mostPopular);
 app.get('/mostRecent', routes.mostRecent);
 app.get('/categories', routes.categories);
-app.get('/add', add.addNew);
-app.get('/dealView/:places',routes.dealView);
-app.get('/dealView/:places/upVote',routes.upVote);
-app.get('/dealView/:places/downVote',routes.downVote);
+app.get('/add', routes.addNew);
+app.get('/dealView/:id',routes.dealView);
+app.get('/dealView/:id/upVote',routes.upVote);
+app.get('/dealView/:id/downVote',routes.downVote);
 app.get('/homepage2', routes.view_test)
 app.get('/failedLogin', function(req,res){
 	res.sendfile('./static/failedLogin.html');

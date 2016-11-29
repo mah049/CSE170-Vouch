@@ -55,17 +55,17 @@
     <div class="row" id="buffer"></div>
       <div class="row" id="margin-left-right-align">
           <div class="well" align="middle">
-            <h2>{{Deal}} <br> Available Starting at 4:00 PM until closing <br> No Coupons Necessary </h2>
+            {{Deal}} <br> Valid until: {{ValidUntil}}
           </div>
       </div>
       <div class="row">
         <div class="col-md-12" id="margin-left-right-align">
           <p align="middle">
           Do you vouch for this?
-          <a id="thumbs-up" href="/dealView/{{Place}}/upVote">
+          <a id="thumbs-up" href="/dealView/{{ID}}/upVote">
           <img src="/images/ThumbsUp.JPG" alt="HTML5 icon">
           </a>
-          <a id="thumbs-down" href="/dealView/{{Place}}/downVote">
+          <a id="thumbs-down" href="/dealView/{{ID}}/downVote">
           <img src="/images/ThumbsDown.JPG" alt="HTML5 icon">
           </a>
           </p>

@@ -9,7 +9,6 @@ exports.getDeals = function(req, res) {
 
 exports.view = function(req, res) {
   var temp = data;
-  data['showAlternate']=false;
   if (data.isCategorized) {
     temp = categorized;
   }
@@ -23,6 +22,112 @@ exports.view_test = function(req, res) {
     temp = categorized;
   }
   res.render('index.handlebars', temp);
+}
+
+exports.addNew = function(req, res) {
+  var timeAdded = new Date();
+  var newDeal = {
+    "ID": data.deal.length,
+    "Place": req.query.venue,
+    "Deal": req.query.deal,
+    "Upvote": 0,
+    "Timestamp": timeAdded.getTime(),
+    "ValidUntil" : req.query.date,
+    "Category" : req.query.categories
+  }
+  console.log(newDeal);
+  data.deal.push(newDeal);
+  reOrganize();
+  var temp = data;
+  if (data.isCategorized) {
+    temp = categorized;
+  }
+  res.render('index.handlebars', temp);
+}
+
+function reOrganize() {
+  //categorize
+  var all = false, rest = false; events = false, groc = false;
+  data.isCategorized = false;
+  if (data.all=="checked") {
+    all = true;
+    data.isCategorized = true;
+  }
+  if (data.restaurants=="checked") {
+    rest = true;
+    data.isCategorized = true;
+  }
+  if (data.events=="checked") {
+    events = true;
+    data.isCategorized = true;
+  }
+  if (data.groceries=="checked") {
+    groc = true;
+    data.isCategorized = true;
+  }
+  categorized = clone(data);
+  var list = categorized.deal;
+  var i = list.length;
+  while (i--) {
+    if (all) continue;
+    if (!all && !rest && !events && !groc) continue;
+    if ((list[i].Category=="Restaurants" && rest) ||
+        (list[i].Category=="Events" && events) ||
+        (list[i].Category=="Groceries" && groc)) {
+      continue;
+    }
+    list.splice(i,1);
+  }
+
+  //filter
+  if (data.mostRecent=="checked") {
+    data.mostPopular = "";
+    categorized.mostPopular = "";
+    data.mostRecent = "checked";
+    categorized.mostRecent = "checked";
+    data.leastDistance = "";
+    categorized.leastDistance = "";
+    var manipulate = data;
+    var retCategorized = categorized;
+    if (data.isCategorized) {
+      var sortByTimestamp = categorized.deal.sort(function(a, b) {
+        return parseFloat(b.Timestamp) - parseFloat(a.Timestamp);
+      });
+      var convertToString = JSON.stringify(sortByTimestamp);
+      var convertToJSON = "{ \"deal\":"+convertToString+"}";
+      retCategorized = JSON.parse(convertToJSON);
+    }
+    var sortByTimestamp = manipulate.deal.sort(function(a, b) {
+      return parseFloat(b.Timestamp) - parseFloat(a.Timestamp);
+    });
+    var convertToString = JSON.stringify(sortByTimestamp);
+    var convertToJSON = "{ \"deal\":"+convertToString+"}";
+    var ret = JSON.parse(convertToJSON);
+  }
+  else if (data.mostPopular=="checked") {
+    data.mostPopular = "checked";
+    categorized.mostPopular = "checked";
+    data.mostRecent = "";
+    categorized.mostRecent = "";
+    data.leastDistance = "";  
+    categorized.leastDistance = "";
+    var manipulate = data;
+    var retCategorized = categorized;
+    if (data.isCategorized) {
+      var sortByUpvote = categorized.deal.sort(function(a, b) {
+        return parseFloat(b.Upvote) - parseFloat(a.Upvote);
+      });
+      var convertToString = JSON.stringify(sortByUpvote);
+      var convertToJSON = "{ \"deal\":"+convertToString+"}";
+      retCategorized = JSON.parse(convertToJSON);
+    }
+    var sortByUpvote = manipulate.deal.sort(function(a, b) {
+      return parseFloat(b.Upvote) - parseFloat(a.Upvote);
+    });
+    var convertToString = JSON.stringify(sortByUpvote);
+    var convertToJSON = "{ \"deal\":"+convertToString+"}";
+    var ret = JSON.parse(convertToJSON);
+  }
 }
 
 exports.categories = function(req, res) {
@@ -138,14 +243,14 @@ exports.mostRecent = function(req, res) {
 }
 
 exports.upVote = function(req,res) {
-  var place = req.params.places;
+  var id = req.params.id;
   for(var i=0; i<categorized.deal.length; i++) {
-    if(categorized.deal[i].Place==place) {
+    if(categorized.deal[i].ID==id) {
       categorized.deal[i].Upvote+=1;
     }
   }
   for(var i=0; i<data.deal.length; i++){
-    if(data.deal[i].Place==place){
+    if(data.deal[i].ID==id){
        data.deal[i].Upvote+=1;
     }   
   }
@@ -153,14 +258,14 @@ exports.upVote = function(req,res) {
 }
 
 exports.downVote = function(req,res) {
-  var place = req.params.places;
+  var id = req.params.id;
   for(var i=0; i<categorized.deal.length; i++) {
-    if(categorized.deal[i].Place==place) {
+    if(categorized.deal[i].ID==id) {
       categorized.deal[i].Upvote-=1;
     }
   }
   for(var i = 0; i<data.deal.length; i++){
-    if(data.deal[i].Place==place){
+    if(data.deal[i].ID==id){
       data.deal[i].Upvote-=1;
     }
   }
@@ -168,9 +273,9 @@ exports.downVote = function(req,res) {
 }
 
 exports.dealView = function(req,res) {  
-  var place = req.params.places;
+  var id = req.params.id;
   for(var i = 0; i<data.deal.length; i++){
-    if(data.deal[i].Place==place){
+    if(data.deal[i].ID==id){
         res.render('dealViews.handlebars', data.deal[i]);
     }
   }
@@ -194,6 +299,7 @@ exports.signOut = function(req,res) {
   data.loggedIn=false;
   res.redirect('/');
 }
+
 function clone(obj) {
     var copy;
 
