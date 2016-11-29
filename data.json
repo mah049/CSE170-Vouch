@@ -14,7 +14,7 @@
 	 "Place" : "Pizzaport",
 	 "Deal" : "45 cents Wings and Mozarella Sticks",
 	 "Upvote" : 100,
-	 "Timestamp" : 1478763930677,
+	 "Timestamp" : 7,
 	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants"
 	},
@@ -23,7 +23,7 @@
 	 "Place": "McDonalds",
 	 "Deal" : "20% Off",
 	 "Upvote" : 20,
-	 "Timestamp" : 1478763931677,
+	 "Timestamp" : 6,
 	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants"
 	},
@@ -32,7 +32,7 @@
 	 "Place": "BurgerKing",
 	 "Deal" : "10% Off",
 	 "Upvote" : 10,
-	 "Timestamp" : 1478763932677,
+	 "Timestamp" : 5,
 	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants"
 	},
@@ -41,7 +41,7 @@
 	 "Place": "Wendy's",
 	 "Deal" : "20% Off",
 	 "Upvote" : 9,
-	 "Timestamp" : 1478763933677,
+	 "Timestamp" : 4,
 	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants" 
 	},
@@ -50,7 +50,7 @@
 	 "Place": "Carl's Jr.",
 	 "Deal" : "20% Off",
 	 "Upvote" : 40,
-	 "Timestamp" : 1478763934677,
+	 "Timestamp" : 3,
 	 "ValidUntil" : "forever",
 	 "Category" : "Restaurants"
 	},
@@ -59,7 +59,7 @@
 	 "Place": "Ralph's",
 	 "Deal" : "20% Off",
 	 "Upvote" : 10,
-	 "Timestamp" : 1478769829277,
+	 "Timestamp" : 2,
 	 "ValidUntil" : "forever",
 	 "Category" : "Groceries"
 	},
@@ -68,7 +68,7 @@
 	 "Place": "Concert",
 	 "Deal" : "Free",
 	 "Upvote" : 3,
-	 "Timestamp" : 1237845390,
+	 "Timestamp" : 1,
 	 "ValidUntil" : "forever",
 	 "Category" : "Events"
 	}
