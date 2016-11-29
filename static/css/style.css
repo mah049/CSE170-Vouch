@@ -20,6 +20,7 @@
 
 #margin-right-align {
 	padding-right:10%;
+
 }
 
 #margin-left-right-align {
@@ -30,7 +31,6 @@
 #margin-top {
 	min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   	min-height: 100vh; /* These two lines are counted as one :-)       */
-
   	display: flex;
   	align-items: center;
 }
@@ -41,7 +41,7 @@
 }
 
 #buffer {
-	padding:3.2%;
+	padding:1.2%;
 }
 
 #small-buffer {
@@ -109,15 +109,6 @@ h1 {
   font-variant: normal;
   font-weight: 400;
 }
-
-
-
-
-
-
-
-
-
 
 
 #searcharea {
