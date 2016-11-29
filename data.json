@@ -1,8 +1,7 @@
 {
 	"isCategorized" : false,
 	"mostPopular" : "",
-	"mostRecent" : "",
-	"leastDistance" : "",
+	"mostRecent" : "checked",
 	"all" : "",
 	"restaurants" : "",
 	"events" : "",
@@ -10,6 +9,7 @@
 	"loggedIn" : false,
 	"currentUsername" : "",
 	"deal" : [{
+	 "ID" : 0,
 	 "Place" : "Pizzaport",
 	 "Deal" : "20% Off",
 	 "Upvote" : 100,
@@ -17,6 +17,7 @@
 	 "Category" : "Restaurants"
 	},
 	{
+	 "ID" : 1,
 	 "Place": "McDonalds",
 	 "Deal" : "20% Off",
 	 "Upvote" : 20,
@@ -24,6 +25,7 @@
 	 "Category" : "Restaurants"
 	},
 	{
+	 "ID" : 2,
 	 "Place": "BurgerKing",
 	 "Deal" : "10% Off",
 	 "Upvote" : 10,
@@ -31,6 +33,7 @@
 	 "Category" : "Restaurants"
 	},
 	{
+	 "ID" : 3,
 	 "Place": "Wendy's",
 	 "Deal" : "20% Off",
 	 "Upvote" : 9,
@@ -38,6 +41,7 @@
 	 "Category" : "Restaurants" 
 	},
 	{
+	 "ID" : 4,
 	 "Place": "Carl's Jr.",
 	 "Deal" : "20% Off",
 	 "Upvote" : 40,
@@ -45,6 +49,7 @@
 	 "Category" : "Restaurants"
 	},
 	{
+	 "ID" : 5,
 	 "Place": "Ralph's",
 	 "Deal" : "20% Off",
 	 "Upvote" : 10,
@@ -52,6 +57,7 @@
 	 "Category" : "Groceries"
 	},
 	{
+	 "ID" : 6,
 	 "Place": "Concert",
 	 "Deal" : "Free",
 	 "Upvote" : 3,

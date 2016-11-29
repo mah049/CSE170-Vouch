@@ -5,7 +5,6 @@ $('#checkAll').click(function () {
 $(document).ready(function (e) {
   $('.check').click(function (e) {
     $("#categories").submit();
-    $.get("/categories", reRender);
   });
 });
 
@@ -33,7 +32,7 @@ $('#mostRecent').click(function() {
                   output += '<div class="col-md-6 well">';
                   output += '<div class="col-md-3"></div>';
                   output += '<div class="col-md-7">';
-                  output += '<h5 align=\"middle\"><a href=\"dealView/'+ val.Place + '">'+val.Place+'</a></h5>';
+                  output += '<h5 align=\"middle\"><a href=\"dealView/'+ val.ID + '">'+val.Place+'</a></h5>';
                   output += '<h5 align="middle">'+ val.Upvote + ' vouches</h5>'
                   output += '</div>';
                   output += '</div>';
@@ -62,6 +61,6 @@ function reRender(result) {
   for (var i=0; i<list.length; i++) {
     if (list[i]==null) continue;
     $("#deal-container").append(
-      "<a href = \"dealView/"+list[i].Place+"\"> <div class=\"well\"> <p id=\"newDeals\">"+list[i].Place+"<br>"+list[i].Deal+"<br>"+list[i].Upvote+" Vouches</p> </div> </a>");
+      "<a href = \"dealView/"+list[i].ID+"\"> <div class=\"well\"> <p id=\"newDeals\">"+list[i].Place+"<br>"+list[i].Deal+"<br>"+list[i].Upvote+" Vouches</p> </div> </a>");
   }
 }
